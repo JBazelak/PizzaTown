@@ -1,0 +1,438 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    background-image: url(../grafika/tło3.jpg);
+}
+
+
+
+/* ###################      NAV-BAR     ###################*/
+
+nav {
+    width: 100%;
+    display: flex;
+}
+
+#nav-bar {
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    background-color: #000;
+    font-size: 2.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 23px 2px rgba(0, 0, 0, 0.9);
+}
+
+
+#nav-bar img {
+    height: 150px;
+}
+
+.nav-element {
+    height: 100%;
+    padding: 10px;
+    color: gold;
+    text-align: center;
+    text-decoration: none;
+    border-right: 2px dotted white;
+    flex-grow: 1;
+}
+
+/* .nav-element:nth-last-of-type(5) {
+    flex-shrink: ;
+} */
+
+.nav-element:hover {
+    background-color: #666666;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    top: -115px;
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ###################      DROPDOWN-NAV-BAR     ###################*/
+
+#dropdown {
+    padding: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    font-size: 2em;
+    position: relative;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    margin: 0;
+    position: relative;
+}
+
+.nav-item:nth-of-type(2) {
+    padding-top: 5px;
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content {
+    width: 100vw;
+    display: none;
+    position: absolute;
+    right: .02vw;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown-item {
+    width: 100%;
+    padding: 30px;
+    color: gold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-item img {
+    height: 150px;
+}
+
+.nav-item:hover .dropdown-content {
+    display: block;
+    color: white;
+}
+
+#toggle-button {
+    width: 70px;
+    height: 50px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gold;
+    border-radius: 3px;
+    background-color: #222;
+}
+
+/* ###################      DESCRIPTION    ###################*/
+
+#description {
+    margin: 130px 0;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    box-shadow: 0px 0px 23px 2px rgba(0, 0, 0, 0.9);
+    background-image: url(../grafika/prism.png);
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+#description h1 {
+    font-weight: 900;
+}
+
+#description-l {
+    width: 50%;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gold;
+    font-size: 2em;
+    text-align: center;
+}
+
+#description img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 30px;
+}
+
+#description-r {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gold;
+}
+
+#description-r img {
+    width: 640px;
+    height: 100%;
+    background-color: #fff;
+}
+
+
+/* ###################      FOOTER    ###################*/
+
+#contact {
+    width: 100%;
+    height: 200px;
+    margin: 150px 0;
+    background-image: url(../grafika/prism.png);
+    color: gold;
+    text-align: center;
+    padding: 60px;
+    font-size: 5em;
+    box-shadow: 0px 0px 23px 2px rgba(0, 0, 0, 0.9);
+}
+
+#social {
+    width: 100%;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../grafika/tło1.jpg);
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 23px 2px rgba(0, 0, 0, 0.9);
+}
+
+#social img {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    width: 150px;
+    height: 200px;
+}
+
+#socials {
+    display: flex;
+    justify-content: row;
+}
+
+.end {
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    width: 100%;
+    height: 70px;
+    padding-top: 25px;
+    background-color: #111;
+    color: gold;
+}
+
+/* ###################      MEDIA-QUARIES(Response)    ###################*/
+
+@media screen and (max-width: 1100px) {
+    #show {
+        display: flex;
+    }
+
+    #nav-bar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1101px) {
+    #show {
+        display: none;
+    }
+
+    #nav-bar {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header img {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1365px) {
+    #description-r img {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #description {
+        flex-direction: column;
+    }
+
+    #description-l {
+        width: 100%;
+        font-size: 2em;
+    }
+
+    #description-l h1 {
+        font-size: 2em;
+    }
+
+    #description-r {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    header img {
+        display: none;
+    }
+
+    #description-l {
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    #description-l h1 {
+        font-size: 1.5em;
+    }
+
+    #description-r {
+        width: 80%;
+    }
+
+    #description-r img {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+
+
+.teleport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* border: 1px solid #fff; */
+    width: 65%;
+    height: 100%;
+    text-decoration: none;
+}
+
+/* ###################      MENU    ###################*/
+
+main {
+    width: 100%;
+    padding: 20px;
+}
+
+#menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url(../grafika/mooning.png);
+    box-shadow: 0px 0px 23px 2px rgba(0, 0, 0, 0.9);
+    padding: 0 93px;
+}
+
+#menu .pizza {
+    width: 600px;
+    min-width: 300px;
+    padding: 20px;
+    height: auto;
+    margin: 2rem;
+    font-size: 2em;
+    color: #f1f1f1;
+    background-image: url(../grafika/pizza-con.png);
+    box-shadow: 0px 0px 23px 2px rgba(0, 0, 0, 0.9);
+}
+
+#menu .pizza h1 {
+    color: gold;
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+select {
+    color: black;
+    font-weight: 600;
+}
+
+option {
+    font-weight: 700;
+}
+
+button {
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #57a02c;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#notification {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    z-index: 9998;
+}
+
+#alert {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f72020;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    z-index: 9998;
+}
+
+#barrier {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 60px;
+}

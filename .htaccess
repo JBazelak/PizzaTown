@@ -1,0 +1,9 @@
+### PROTECT FILES ###   
+<FilesMatch "\.(htacces|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine on
+RewriteRule strona-główna index.php
+RewriteRule menu menu.php
