@@ -29,32 +29,29 @@ p {
 }
 
 .login-button {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    padding: 10px 40px;
+    width: 150px; 
+    height: 40px; 
     background-color: #fd7301;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 30px;
     outline: none;
+    border: 2px solid transparent;
 }
 
-.login-button:hover {
-    -webkit-box-shadow: 0px 0px 10px 2px #f07613;
-    -moz-box-shadow: 0px 0px 10px 2px #f07613;
-    box-shadow: 0px 0px 10px 2px #f07613;
-    border: 2px solid #f07613;
-    background-color: #f18714;
-    outline: none;
-}
-
+.login-button:hover,
 .login-button:focus {
     -webkit-box-shadow: 0px 0px 10px 2px #f07613;
     -moz-box-shadow: 0px 0px 10px 2px #f07613;
     box-shadow: 0px 0px 10px 2px #f07613;
     border: 2px solid #f07613;
     background-color: #f18714;
+    outline: none;
 }
 
 .arrow {
