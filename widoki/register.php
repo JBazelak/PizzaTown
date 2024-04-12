@@ -52,7 +52,7 @@ if (isset($_POST['username'], $_POST['password'], $_POST['passwordRepeat'], $_PO
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     //bot or not
-    $secret = "6LedeEopAAAAALz9ZgDxNvm1k8btIOZP6zD7d3HW";
+    $secret = ""; // <-- your secret token goes here
     $check = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
     $response = json_decode($check);
     if ($response->success == false) {
@@ -217,8 +217,10 @@ if (isset($_POST['username'], $_POST['password'], $_POST['passwordRepeat'], $_PO
                         <input type="text" name="street" placeholder="Ulica">
                         <input type="text" name="postalCode" placeholder="Kod pocztowy">
                         <input type="text" name="city" placeholder="Miasto">
-                        <div class="g-recaptcha" data-sitekey="6LedeEopAAAAAImDZfguyM187oawh6hSHUQ0z-Y9"
+                        
+                        <div class="g-recaptcha" data-sitekey="YOUR PUBLIC TOKEN GOES HERE!" 
                             data-action="SIGNUP">
+                        
                         </div>
                         <button>Zarejestruj się</button>
                         <a href="../index.php" style="position: absolute; margin: 20px;">&#8592; Strona Główna</a>
